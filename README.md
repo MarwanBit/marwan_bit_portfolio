@@ -6,11 +6,9 @@
     </div>
 </div>
 
-## 📋 `<a name="table">`Table of Contents `</a>`
+## Table of Contents
 
 1. 🤸 [Quick Start](#quick-start)
-
-`<a name="quick-start">`🤸 Quick Start `</a>`
 
 Follow these steps to set up the project locally on your machine.
 
