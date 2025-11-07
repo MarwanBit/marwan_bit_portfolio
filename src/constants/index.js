@@ -91,7 +91,7 @@ export const myProjects = [
       'Powered by Amazons S3 (Simple Storage Service), PostgresSQL, and Clerk, users are able to store their files on the cloud, and access them anywhere with an internet connection.',
     href: 'https://file-uploader-nextjs.vercel.app/signup',
     texture: '/textures/project/file_uploader_demo.mp4',
-    logo: '/assets/project-logo2.png',
+    logo: '/assets/crystal-ball.svg',
     github_link: 'https://github.com/MarwanBit/file-uploader-nextjs/tree/main',
     logoStyle: {
       backgroundColor: '#13202F',
