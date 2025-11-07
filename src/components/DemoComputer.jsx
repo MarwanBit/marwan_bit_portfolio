@@ -12,7 +12,11 @@ const DemoComputer = (props) => {
   const { nodes, materials, animations } = useGLTF('/models/computer.glb');
   const { actions } = useAnimations(animations, group);
 
-  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
+  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4', {
+    muted: true,
+    loop: true,
+    playsInline: true,
+  });
 
   useEffect(() => {
     if (txt) {

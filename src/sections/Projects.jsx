@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 
@@ -12,6 +12,18 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleNavigation = (direction) => {
     setSelectedProjectIndex((prevIndex) => {
@@ -91,7 +103,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full" style={{ touchAction: 'pan-y' }}>
           <Canvas>
             <ambientLight intensity={Math.PI} />
             <directionalLight position={[10, 10, 5]} />
@@ -102,7 +114,7 @@ const Projects = () => {
                 </group>
               </Suspense>
             </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} enableRotate={window.innerWidth >= 768} />
+            {isDesktop && <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />}
           </Canvas>
         </div>
       </div>
