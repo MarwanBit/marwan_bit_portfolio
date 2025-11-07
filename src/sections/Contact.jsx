@@ -68,8 +68,8 @@ const Contact = () => {
     <section className="c-space my-20" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
+      <div className="relative min-h-screen flex items-center justify-center flex-col py-10">
+        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-full w-full object-cover" />
 
         <div className="contact-container">
           <h3 className="head-text">Let&apos;s talk</h3>
@@ -78,8 +78,8 @@ const Contact = () => {
             life, I&apos;m here to help.
           </p>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
-            <label className="space-y-3">
+          <form ref={formRef} onSubmit={handleSubmit} className="sm:mt-8 mt-12 flex flex-col space-y-5">
+            <label className="space-y-2">
               <span className="field-label">Full Name</span>
               <input
                 type="text"
@@ -92,7 +92,7 @@ const Contact = () => {
               />
             </label>
 
-            <label className="space-y-3">
+            <label className="space-y-2">
               <span className="field-label">Email address</span>
               <input
                 type="email"
@@ -105,7 +105,7 @@ const Contact = () => {
               />
             </label>
 
-            <label className="space-y-3">
+            <label className="space-y-2">
               <span className="field-label">Your message</span>
               <textarea
                 name="message"
