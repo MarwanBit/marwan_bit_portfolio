@@ -151,10 +151,10 @@ export const myProjects = [
       AWS Lambda, CloudWatch, and SageMaker for automated scheduling, data processing, and model training; 
       and NumPy, Pandas, and Scikit-Learn for feature engineering, model development, and evaluation.
       `,
-    href: 'https://github.com/MarwanBit/CS2_Match_Predictor',
+    href: 'https://github.com/MarwanBit/cs2-infrastructure',
     texture: '/textures/project/cs2_match_predictor.mp4',
     logo: '/assets/crystal-ball.svg',
-    github_link: '',
+    github_link: 'https://github.com/MarwanBit/cs2-infrastructure',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
